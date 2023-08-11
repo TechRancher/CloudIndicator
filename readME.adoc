@@ -32,7 +32,7 @@ look up how to do line slope and point slope equations.
 
 .Items Needed
 * One Photoresistor buttons
-* One 10K Ohm Resistor
+* One 5K Ohm Resistor
 * One servo motor
 * One servo motor arm to help you see the servo moving
 * One Arduino R3 
