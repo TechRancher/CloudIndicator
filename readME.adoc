@@ -51,9 +51,9 @@ Arduino to the GND rail on the breadboard. Run a jumper wire from pin A0 to colu
 from GND rail to column 32. Then run a jumper wire from the 5V rail to column 26. The circuit is now wired up.
 
 .Thumbnail
-image:file:///home/jay/Arduino/SmallProjects/CloudIndicator/circuitLayout.png[
+image:https://github.com/TechRancher/CloudIndicator/blob/main/circuitLayout.png[
 "KiCad Schematic",
-link="file:///home/jay/Arduino/SmallProjects/CloudIndicator/circuitLayout.png"]
+link="https://github.com/TechRancher/CloudIndicator/blob/main/circuitLayout.png"]
 
 
 .Code
