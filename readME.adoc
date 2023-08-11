@@ -1,0 +1,77 @@
+== Cloud Indicator
+:Project: Cloud Indicator With The Use Of A Servo
+:Author: Jason Sikes
+:AKA: TechRancher
+:Email: https://id.arduino.cc/sikesjay
+:Date: August 10, 2023
+:Revision: 1.0
+
+Title of this project is: {project}
+
+Author is {author}
+
+Also known as: {aka}
+
+Written on: {date}
+
+Version: {revision}
+
+.Description of the project
+This project uses a servo, and a photoresistor. The photoresistor will read the resistance from the 
+light in the area where the photoresitor is located. Then with some math we convert that into 
+analog data to control the servo. We will use the library Servo.h to help with the analog data sent
+to the servo. What you need to do first after building the circuit is to test your photorestor values
+in the area where it is placed. Say, like my work bench with overhead lighting. My values I got for
+bright light is 32 resistance value, and with lights off 1006 resistance value. Remember voltage 
+drops as light drops, but resistance increases through the photoresistor. That is why we read higher
+resistance values when the light is off. Now we record this value into a valiable to use with math.
+We will use Line Slope math then use Point Slope math to get to our equation to tell the IC to adjust
+the servo to the right degree. What we want is the servo to move from 0*(degree) to 180*(degree) based
+off the photoresistor value. So, with the Point Slope equation we can do this. For the math involved
+look up how to do line slope and point slope equations.
+
+.Items Needed
+* One Photoresistor buttons
+* One 10K Ohm Resistor
+* One servo motor
+* One servo motor arm to help you see the servo moving
+* One Arduino R3 
+* One Breadboard
+* Eight jumper wires
+
+.Circuit Design
+On the breadboard I installed the 10K Ohm resistor left leg to column 26, and the right leg to column 30.
+The left leg of the photoresistor to column 30, and the right leg to column 32. Now, for the servo. There
+are 3 wires coming form the servo. Brown, Red, Orange and here is how to wire them up. The brown is GND, so
+run a jumper wire from the breadboard GND to the brown connector. The red wire on the server is 5V power,
+so run a jumper wire from the breadboard positive rail to the red connector on the servo. And the orange
+wire is signal wire, run a jumper wire from pin 11 on the Ardunio to the orange connector. We need to now
+run 5V power from the Arduino to the positive rail on the breadboard. Run a jumper wire from the GND on the
+Arduino to the GND rail on the breadboard. Run a jumper wire from pin A0 to column 30. Run a jumper wire
+from GND rail to column 32. Then run a jumper wire from the 5V rail to column 26. The circuit is now wired up.
+
+.Thumbnail
+image:file:///home/jay/Arduino/SmallProjects/CloudIndicator/circuitLayout.png[
+"KiCad Schematic",
+link="file:///home/jay/Arduino/SmallProjects/CloudIndicator/circuitLayout.png"]
+
+
+.Code
+The code for this project is in the file called "CloudIndicator.ino".
+
+.What To Expect
+This project will take reading from the photoresistor and through our Point Slope equation we will make the 
+servo move. Now, when you move your hand over the photoresistor the servo will move in responds to the 
+resistance through the photoresistor. So, when the light in the area of the photoresistor is less, the servo
+will move to indicate the increase in resistance. Same as when the light in the area of the photoresistor 
+increases, the servo will more to indicate the decrease in resistance through the photoresistor. Have fun with
+this. Brainstorm and think of ways how to use this in a project.
+
+.Licensing Of Code
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+
+.Contact Me
+If you have any questions feel free to contact me at: {email}
